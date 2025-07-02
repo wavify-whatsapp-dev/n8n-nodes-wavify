@@ -1,0 +1,65 @@
+{
+  "name": "n8n-nodes-wavify-api",
+  	"version": "0.0.2",
+  "description": "n8n community node for Wavify WhatsApp API with messaging operations and basic group functionality",
+  "keywords": [
+    "n8n-community-node-package",
+    "whatsapp",
+    "messaging",
+    "wavify",
+    "chat"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wavify-com-br/n8n-nodes-wavify",
+  "author": {
+    "name": "Wavify",
+    "email": "contato@wavify.com.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wavify-com-br/n8n-nodes-wavify.git"
+  },
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=9.1"
+  },
+  "packageManager": "pnpm@9.1.4",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx rimraf dist && tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json",
+    "test": "node teste-local.js",
+    "pack:dev": "npm run build && npm pack",
+    "install:global": "npm run pack:dev && npm install -g ./n8n-nodes-wavify-api-0.0.2.tgz",
+    "test:n8n": "npm run install:global && echo 'Plugin instalado! Execute: n8n start'"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/WavifyApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Wavify/Wavify.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "@typescript-eslint/parser": "^7.13.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.1",
+    "gulp": "^4.0.2",
+    "n8n-workflow": "*",
+    "prettier": "^3.3.2",
+    "typescript": "^5.5.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
