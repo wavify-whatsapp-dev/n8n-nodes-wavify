@@ -85,7 +85,7 @@ Text: Mensagem para o grupo via n8n!
 ### Setup do Projeto
 ```bash
 # Clone o repositório
-git clone https://github.com/wavify-whatsapp-dev/n8n-nodes-wavify-api.git
+git clone https://github.com/wavify-whatsapp-dev/n8n-nodes-wavify.git
 cd n8n-nodes-wavify-api
 
 # Instale as dependências
