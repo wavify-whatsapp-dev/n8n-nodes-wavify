@@ -1,4 +1,4 @@
-# n8n-nodes-wavify-api
+# n8n-nodes-wavify
 
 ![n8n.io - Workflow Automation](https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png)
 
@@ -26,12 +26,12 @@ Um plugin completo para n8n que integra com a API Wavify, permitindo automação
 
 ### Via npm
 ```bash
-npm install n8n-nodes-wavify-api
+npm install n8n-nodes-wavify
 ```
 
 ### Via n8n Community Nodes
 1. Vá para **Settings** > **Community Nodes** no n8n
-2. Instale: `n8n-nodes-wavify-api`
+2. Instale: `n8n-nodes-wavify`
 
 ## ⚙️ Configuração
 
@@ -86,7 +86,6 @@ Text: Mensagem para o grupo via n8n!
 ```bash
 # Clone o repositório
 git clone https://github.com/wavify-whatsapp-dev/n8n-nodes-wavify.git
-cd n8n-nodes-wavify-api
 
 # Instale as dependências
 npm install
@@ -133,13 +132,13 @@ Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE.md](LI
 
 ## 📞 Suporte
 
-- **Issues**: [GitHub Issues](https://github.com/wavify/n8n-nodes-wavify-api/issues)
+- **Issues**: [GitHub Issues](https://github.com/wavify-whatsapp-dev/n8n-nodes-wavify/issues)
 - **Documentação Wavify**: [https://api.wavify.com.br/swagger](https://api.wavify.com.br/swagger)
 - **n8n Community**: [https://community.n8n.io](https://community.n8n.io)
 
 ## 📊 Versões
 
-### v0.0.2
+### v0.0.3
 - ✅ **10 operações de messaging** implementadas
 - ✅ **Envio de mensagens** (texto, mídia, localização, sticker)
 - ✅ **Operações básicas de grupo** (listar, enviar para grupo)  
@@ -155,7 +154,7 @@ npm run build           # Compilar
 node teste-local.js     # Testar funcionamento
 
 # 1. Instalar globalmente
-npm install -g ./n8n-nodes-wavify-0.0.2.tgz
+npm install -g ./n8n-nodes-wavify-0.0.3.tgz
 
 # 2. Iniciar n8n
 n8n start
@@ -170,7 +169,7 @@ npm init -y
 
 # Instalar n8n local + plugin
 npm install n8n
-npm install ../caminho/para/n8n-nodes-wavify-api-0.0.2.tgz
+npm install ../caminho/para/n8n-nodes-wavify-0.0.3.tgz
 
 # Executar
 npx n8n start

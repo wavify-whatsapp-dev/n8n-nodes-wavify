@@ -1,6 +1,6 @@
 {
-  "name": "n8n-nodes-wavify-api",
-  	"version": "0.0.2",
+  "name": "n8n-nodes-wavify",
+  	"version": "0.0.3",
   "description": "n8n community node for Wavify WhatsApp API with messaging operations and basic group functionality",
   "keywords": [
     "n8n-community-node-package",
@@ -10,14 +10,14 @@
     "chat"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/wavify-com-br/n8n-nodes-wavify",
+  "homepage": "https://github.com/wavify-whatsapp-dev/n8n-nodes-wavify",
   "author": {
     "name": "Wavify",
     "email": "contato@wavify.com.br"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wavify-com-br/n8n-nodes-wavify.git"
+    "url": "https://github.com/wavify-whatsapp-dev/n8n-nodes-wavify.git"
   },
   "engines": {
     "node": ">=18.10",
@@ -34,7 +34,7 @@
     "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json",
     "test": "node teste-local.js",
     "pack:dev": "npm run build && npm pack",
-    "install:global": "npm run pack:dev && npm install -g ./n8n-nodes-wavify-api-0.0.2.tgz",
+    "install:global": "npm run pack:dev && npm install -g ./n8n-nodes-wavify-0.0.3.tgz",
     "test:n8n": "npm run install:global && echo 'Plugin instalado! Execute: n8n start'"
   },
   "files": [
